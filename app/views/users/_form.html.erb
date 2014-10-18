@@ -31,3 +31,9 @@
     <%= f.submit %>
   </div>
 <% end %>
+<% unless @user.new_record? %>
+<div>
+  <%= gravatar_for @user %>
+  <a href="http://gravatar.com/emails">change</a>
+</div>
+<% end %>
